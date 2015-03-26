@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+	version="2.2">
+	<navigation-rule>
+		<display-name>addcontact.xhtml</display-name>
+		<from-view-id>/addcontact.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/listcontacts.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>listcontacts.xhtml</display-name>
+		<from-view-id>/listcontacts.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>backnewcontact</from-outcome>
+			<to-view-id>/addcontact.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+</faces-config>

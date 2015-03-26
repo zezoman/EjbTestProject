@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14271291075300" configfile="/StatefullTest/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="addcontact.xhtml" id="pf14273630396810" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" outlinks="pf14273630396811" inlinks="pf14273646937143" path="/addcontact.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="listcontacts.xhtml" id="pf14273630396812" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf14273646937143" inlinks="pf14273630396811" path="/listcontacts.xhtml"/>
+  <links id="pf14273630396811" target="pf14273630396812" source="pf14273630396810" outcome="success" redirect="true"/>
+  <links id="pf14273646937143" target="pf14273630396810" source="pf14273630396812" outcome="backnewcontact" redirect="true"/>
+</pageflow:Pageflow>

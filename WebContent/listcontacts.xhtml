@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>List of Contacts</title>
+</h:head>
+<h:body>
+	<h2>My Contacts</h2>
+	<h:dataTable value="#{contactBean.contactList}" var="c">
+		<h:column>
+			<f:facet name="header">Contact #</f:facet>
+			#{c.contactid}
+		</h:column>
+		<h:column>
+			<f:facet name="header">First Name</f:facet>
+			#{c.firstName}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Last Name</f:facet>
+			#{c.lastName}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Phone #</f:facet>
+			#{c.phoneNo}
+		</h:column>
+	</h:dataTable>
+	<h:form>
+		<h:commandButton value="Go Back" action="#{contactBean.backToNewContact}" />
+	</h:form>
+</h:body>
+</html>

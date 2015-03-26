@@ -1,0 +1,15 @@
+<resources>
+	<Resource id="testDS" type="DataSource">
+		jdbcDriver = com.mysql.jdbc.Driver
+		jdbcUrl = jdbc:mysql://localhost:3306/test
+		userName = root
+		password = root
+		openejb.datasource.pool = true
+	</Resource>
+	<Resource id="testDS2" type="DataSource">
+		jdbcDriver = org.apache.derby.jdbc.ClientDriver
+		jdbcUrl = jdbc:derby://localhost:3302/sample;create=true
+		userName = app
+		password = app
+	</Resource>
+</resources>
