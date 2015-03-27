@@ -7,9 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
-/**
- * Session Bean implementation class MovieService
- */
+
 @Stateless
 public class MovieService implements MovieServiceRemote, MovieServiceLocal {
 
@@ -17,7 +15,7 @@ public class MovieService implements MovieServiceRemote, MovieServiceLocal {
 	private EntityManager em;
 
 	public MovieService() {
-		// TODO Auto-generated constructor stub
+		System.out.println("Instance created for Movie Service");
 	}
 
 	public void save(String name, String year, String actors) {

@@ -22,14 +22,6 @@ public class ContactService {
 		System.out.println("Instance created for Contact Service");
 	}
 
-	/**
-	 * Method to create new record using provided arguments<br/>
-	 * TransactionAttribute for this method is REQUIRED (default)
-	 * 
-	 * @param firstName
-	 * @param lastName
-	 * @param phone
-	 */
 	public void save(String firstName, String lastName, String phone) {
 		Contact cn = new Contact();
 		cn.setFirstName(firstName);
@@ -39,11 +31,6 @@ public class ContactService {
 		System.out.println("Record saved");
 	}
 
-	/**
-	 * Method to load all contacts from the database
-	 * 
-	 * @return List of all contacts
-	 */
 	public List<Contact> loadAll() {
 		List<Contact> list = null;
 		TypedQuery<Contact> q = em.createNamedQuery("Contact.findAll", Contact.class);

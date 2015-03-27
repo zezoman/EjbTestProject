@@ -49,11 +49,6 @@ public class ContactBean implements Serializable {
 		this.phone = phone;
 	}
 
-	/**
-	 * Call save method on ContactService and update list
-	 * 
-	 * @return Outcome for JSF Navigation
-	 */
 
 	public String addContact() {
 		service.save(firstName, lastName, phone);
