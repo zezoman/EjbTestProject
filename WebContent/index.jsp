@@ -7,6 +7,14 @@
 <title>Welcome!</title>
 </head>
 <body>
-<% response.sendRedirect("faces/addcontact.xhtml"); %>
+	<center><h2>Hello!</h2></center>
+	
+	<form method="get" action="faces/addcontact.xhtml">
+		<input type="submit" value="Add contacts" />
+	</form>
+	<form method="get" action="faces/addmovie.xhtml">
+		<input type="submit" value="Add movies" />
+	</form>
+
 </body>
 </html>

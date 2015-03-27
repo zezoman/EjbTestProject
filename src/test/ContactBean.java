@@ -62,7 +62,12 @@ public class ContactBean implements Serializable {
 	}
 	
 	public String backToNewContact() {
+		clearState();
 		return "backnewcontact";
+	}
+
+	private void clearState() {
+		firstName = lastName = phone = null;
 	}
 
 	public List<Contact> getContactList() {

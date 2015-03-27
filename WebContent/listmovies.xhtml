@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>List of Contacts</title>
+</h:head>
+<h:body>
+	<h2>Movie catalog</h2>
+	<h:dataTable value="#{movieBean.movieList}" var="c">
+		<h:column>
+			<f:facet name="header">Movie #</f:facet>
+			#{c.movieId}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Name</f:facet>
+			#{c.name}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Year</f:facet>
+			#{c.year}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Actors</f:facet>
+			#{c.actors}
+		</h:column>
+	</h:dataTable>
+	
+	<h2>Movies from 2014</h2>
+	#{movieBean.searchForYear(2014)}
+	<h:dataTable value="#{movieBean.moviesFromYear}" var="m">
+		<h:column>
+			<f:facet name="header">Name</f:facet>
+			#{m}
+		</h:column>
+	</h:dataTable>
+	
+	<h:form>
+		<h:commandButton value="Go Back" action="#{movieBean.backToNewMovie}" />
+	</h:form>
+</h:body>
+</html>

@@ -7,5 +7,5 @@ import javax.ejb.Remote;
 @Remote
 public interface MovieServiceRemote {
 	public List<Movie> loadAll();
-	public List<Movie> findFromYear(String year);
+	public List<String> findFromYear(String year);
 }

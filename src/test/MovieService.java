@@ -30,14 +30,14 @@ public class MovieService implements MovieServiceRemote, MovieServiceLocal {
 	
 	public List<Movie> loadAll() {
 		List<Movie> list = null;
-		TypedQuery<Movie> q = em.createQuery("Movie.findAll", Movie.class);
+		TypedQuery<Movie> q = em.createNamedQuery("Movie.findAll", Movie.class);
 		list = q.getResultList();
 		return list;
 	}
 	
-	public List<Movie> findFromYear(String year) {
-		List<Movie> list = null;
-		TypedQuery<Movie> q = em.createNamedQuery("Movie.findFromYear", Movie.class);
+	public List<String> findFromYear(String year) {
+		List<String> list = null;
+		TypedQuery<String> q = em.createNamedQuery("Movie.findFromYear", String.class);
 		q.setParameter("year", year);
 		list = q.getResultList();
 		return list;

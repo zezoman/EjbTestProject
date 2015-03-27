@@ -21,4 +21,23 @@
 			<redirect />
 		</navigation-case>
 	</navigation-rule>
+	
+	<navigation-rule>
+		<display-name>addmovie.xhtml</display-name>
+		<from-view-id>/addmovie.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>success</from-outcome>
+			<to-view-id>/listmovies.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>listmovies.xhtml</display-name>
+		<from-view-id>/listmovies.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>backnewmovie</from-outcome>
+			<to-view-id>/addmovie.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
 </faces-config>
