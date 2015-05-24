@@ -72,5 +72,6 @@ public class ContactBean implements Serializable {
 	public void setContactList(List<Contact> contactList) {
 		this.contactList = contactList;
 	}
+	
 
 }

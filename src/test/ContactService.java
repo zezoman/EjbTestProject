@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
+import javax.interceptor.AroundInvoke;
+import javax.interceptor.InvocationContext;
 import javax.persistence.*;
 
 /**
@@ -36,6 +38,15 @@ public class ContactService {
 		TypedQuery<Contact> q = em.createNamedQuery("Contact.findAll", Contact.class);
 		list = q.getResultList();
 		return list;
+	}
+	
+	@AroundInvoke
+	private Object intercept(InvocationContext ic) throws Exception, TestApplicationException{
+		return 85;
+	}
+	
+	public Integer testInt(){
+		return 75;
 	}
 
 }
